@@ -84,6 +84,7 @@ export default async function cephProxyHandler(req, res) {
 
     if (status !== 200) {
         logger.error("HTTP %d getting data from ceph.  Data: %s", status, data);
+        return res.status(status).end(data);
     }
 
     return res.status(status).send(data);
