@@ -36,7 +36,7 @@ export default function Component({ service }) {
 
         */
     
-  if (!infoData || !infoData.stats || !infoData.df ) {
+  if (!infoData || !infoData.health || !infoData.df ) {
     return (
       <Container service={service}>
         <Block label="ceph.status" />
