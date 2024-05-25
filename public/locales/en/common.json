@@ -887,5 +887,11 @@
         "read": "Read",
         "write": "Write",
         "recovering": "Recovering"
+    },
+    "wgeasy": {
+        "connected": "Connected",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "total": "Total"
     }
 }
