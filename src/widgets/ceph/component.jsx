@@ -8,7 +8,7 @@ export default function Component({ service }) {
   const { t } = useTranslation();
   const { widget } = service;
 
-  const { data: infoData, error: infoError } = useWidgetAPI(widget, "ceph/proxy-hosts");
+  const { data: infoData, error: infoError } = useWidgetAPI(widget, "hosts");
 
   if (infoError) {
     return <Container service={service} error={infoError} />;

@@ -4,6 +4,7 @@ import { httpProxy } from "utils/proxy/http";
 import { formatApiCall } from "utils/proxy/api-helpers";
 import getServiceWidget from "utils/config/service-helpers";
 import createLogger from "utils/logger";
+import widgets from "widgets/widgets";
 
 const proxyName = "cephProxyHandler";
 const sessionTokenCacheKey = `${proxyName}__sessionToken`;
@@ -11,7 +12,7 @@ const logger = createLogger(proxyName);
 
 async function login(widget) {  
   
-  const loginUrl = new URL(formatApiCall("{url}/api/auth", widget));
+  const loginUrl = new URL(formatApiCall(widgets[widget.type].auth, widget));
 
   const [status, , data] = await httpProxy(loginUrl, {
     method: "POST",
@@ -58,7 +59,7 @@ export default async function cephProxyHandler(req, res) {
 
     let token = cache.get(`${sessionTokenCacheKey}.${service}`);
 
-    const url = new URL(formatApiCall("{url}/api/health/full", widget));
+    const url = new URL(formatApiCall(widgets[widget.type].api, { endpoint: "health/full", ...widget}));
     const params = {
         method: "GET",
             headers: {
