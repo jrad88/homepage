@@ -12,7 +12,7 @@ const logger = createLogger(proxyName);
 
 async function login(widget) {  
   
-  const loginUrl = new URL(formatApiCall(widgets[widget.type].auth, widget));
+  const loginUrl = new URL(formatApiCall(widgets[widget.type].api, {endpoint: "auth", ...widget}));
 
   const [status, , data] = await httpProxy(loginUrl, {
     method: "POST",

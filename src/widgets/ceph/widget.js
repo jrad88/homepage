@@ -2,8 +2,7 @@ import cephProxyHandler from "./proxy";
 
 const widget = {
   proxyHandler: cephProxyHandler,
-  api: "{url}/api/",  
-  auth: "{url}/api/auth",
+  api: "{url}/api/{endpoint}",  
 
   mappings: {
     hosts: {
