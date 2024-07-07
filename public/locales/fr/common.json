@@ -888,5 +888,17 @@
         "auth": "Avec authentification",
         "outdated": "Obsolète",
         "banned": "Banni"
+    },
+    "myspeed": {
+        "ping": "Ping",
+        "download": "Récep.",
+        "upload": "Envoi"
+    },
+    "stocks": {
+        "stocks": "Stocks",
+        "loading": "Loading",
+        "open": "Open - US Market",
+        "closed": "Closed - US Market",
+        "invalidConfiguration": "Invalid Configuration"
     }
 }
