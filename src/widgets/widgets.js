@@ -24,6 +24,7 @@ import evcc from "./evcc/widget";
 import fileflows from "./fileflows/widget";
 import flood from "./flood/widget";
 import freshrss from "./freshrss/widget";
+import frigate from "./frigate/widget";
 import fritzbox from "./fritzbox/widget";
 import gamedig from "./gamedig/widget";
 import gatus from "./gatus/widget";
@@ -143,6 +144,7 @@ const widgets = {
   fileflows,
   flood,
   freshrss,
+  frigate,
   fritzbox,
   gamedig,
   gatus,

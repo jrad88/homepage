@@ -399,7 +399,10 @@ export function cleanServiceGroups(groups) {
           expandOneStreamToTwoRows,
           showEpisodeNumber,
 
-          // glances, pihole
+          // frigate
+          enableRecentEvents,
+
+          // glances, pihole, pfsense
           version,
 
           // glances
@@ -509,6 +512,9 @@ export function cleanServiceGroups(groups) {
         if (type === "unifi") {
           if (site) cleanedService.widget.site = site;
         }
+        if (type === "pfsense") {
+          if (version) cleanedService.widget.version = version;
+        }
         if (type === "proxmox") {
           if (node) cleanedService.widget.node = node;
         }
@@ -610,6 +616,9 @@ export function cleanServiceGroups(groups) {
         }
         if (type === "wgeasy") {
           if (threshold !== undefined) cleanedService.widget.threshold = parseInt(threshold, 10);
+        }
+        if (type === "frigate") {
+          if (enableRecentEvents !== undefined) cleanedService.widget.enableRecentEvents = enableRecentEvents;
         }
       }
 
