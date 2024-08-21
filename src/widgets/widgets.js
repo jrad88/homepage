@@ -16,6 +16,7 @@ import coinmarketcap from "./coinmarketcap/widget";
 import crowdsec from "./crowdsec/widget";
 import customapi from "./customapi/widget";
 import deluge from "./deluge/widget";
+import develancacheui from "./develancacheui/widget";
 import diskstation from "./diskstation/widget";
 import downloadstation from "./downloadstation/widget";
 import emby from "./emby/widget";
@@ -137,6 +138,7 @@ const widgets = {
   crowdsec,
   customapi,
   deluge,
+  develancacheui,
   diskstation,
   downloadstation,
   emby,
