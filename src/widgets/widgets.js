@@ -49,6 +49,7 @@ import komga from "./komga/widget";
 import kopia from "./kopia/widget";
 import lidarr from "./lidarr/widget";
 import linkwarden from "./linkwarden/widget";
+import mailcow from "./mailcow/widget";
 import mastodon from "./mastodon/widget";
 import mealie from "./mealie/widget";
 import medusa from "./medusa/widget";
@@ -175,6 +176,7 @@ const widgets = {
   kopia,
   lidarr,
   linkwarden,
+  mailcow,
   mastodon,
   mealie,
   medusa,
