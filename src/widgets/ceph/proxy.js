@@ -70,7 +70,7 @@ export default async function cephProxyHandler(req, res) {
   
     let [status, , data] = await httpProxy(url, params);
 
-    if (status === 401) {
+    if (status === 401 || status === 500) {
         [status, token] = await login(widget);
         
         if (status !== 201) {
