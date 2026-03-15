@@ -57,7 +57,6 @@ import immich from "./immich/widget";
 import jackett from "./jackett/widget";
 import jdownloader from "./jdownloader/widget";
 import jellyfin from "./jellyfin/widget";
-import jellyseerr from "./jellyseerr/widget";
 import jellystat from "./jellystat/widget";
 import karakeep from "./karakeep/widget";
 import kavita from "./kavita/widget";
@@ -92,7 +91,6 @@ import opendtu from "./opendtu/widget";
 import openmediavault from "./openmediavault/widget";
 import openwrt from "./openwrt/widget";
 import opnsense from "./opnsense/widget";
-import overseerr from "./overseerr/widget";
 import pangolin from "./pangolin/widget";
 import paperlessngx from "./paperlessngx/widget";
 import peanut from "./peanut/widget";
@@ -117,8 +115,10 @@ import romm from "./romm/widget";
 import rutorrent from "./rutorrent/widget";
 import sabnzbd from "./sabnzbd/widget";
 import scrutiny from "./scrutiny/widget";
+import seerr from "./seerr/widget";
 import slskd from "./slskd/widget";
 import sonarr from "./sonarr/widget";
+import sparkyfitness from "./sparkyfitness/widget";
 import speedtest from "./speedtest/widget";
 import spoolman from "./spoolman/widget";
 import stash from "./stash/widget";
@@ -131,6 +131,7 @@ import tandoor from "./tandoor/widget";
 import tautulli from "./tautulli/widget";
 import tdarr from "./tdarr/widget";
 import technitium from "./technitium/widget";
+import tracearr from "./tracearr/widget";
 import traefik from "./traefik/widget";
 import transmission from "./transmission/widget";
 import trilium from "./trilium/widget";
@@ -213,7 +214,7 @@ const widgets = {
   jackett,
   jdownloader,
   jellyfin,
-  jellyseerr,
+  jellyseerr: seerr,
   jellystat,
   kavita,
   komga,
@@ -245,7 +246,7 @@ const widgets = {
   ombi,
   opendtu,
   opnsense,
-  overseerr,
+  overseerr: seerr,
   openmediavault,
   openwrt,
   paperlessngx,
@@ -273,8 +274,10 @@ const widgets = {
   rutorrent,
   sabnzbd,
   scrutiny,
+  seerr,
   slskd,
   sonarr,
+  sparkyfitness,
   speedtest,
   spoolman,
   stash,
@@ -287,6 +290,7 @@ const widgets = {
   tautulli,
   technitium,
   tdarr,
+  tracearr,
   traefik,
   transmission,
   trilium,
