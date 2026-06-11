@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import Container from "components/services/widget/container";
 import Block from "components/services/widget/block";
 
@@ -54,8 +54,8 @@ export default function Component({ service }) {
 
   return (
     <Container service={service}>
-      <Block label="ceph.status" value={infoData.health.status} />
-      <Block label="ceph.alerts" value={infoData.health.checks?.length} />
+      <Block label="ceph.status" value={infoData.health.status} highlightValue={infoData.health.status} />
+      <Block label="ceph.alerts" value={infoData.health.checks?.length} highlightValue={infoData.health.checks?.length} />
       <Block label="ceph.freespace" value={t("common.bbytes", { value: infoData.df.stats.total_avail_bytes, maximumFractionDigits: 1 })} />
       <Block label="ceph.usedspace" value={t("common.bbytes", { value: infoData.df.stats.total_used_bytes, maximumFractionDigits: 1 })} />
       <Block label="ceph.free" value={t("common.percent", { value: (infoData.df.stats.total_avail_bytes / infoData.df.stats.total_bytes) * 100, maximumFractionDigits: 1 })} />
