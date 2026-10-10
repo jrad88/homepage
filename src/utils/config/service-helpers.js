@@ -353,6 +353,9 @@ export function cleanServiceGroups(groups) {
           expandOneStreamToTwoRows,
           showEpisodeNumber,
 
+          // feed
+          layout,
+
           // frigate
           enableRecentEvents,
 
@@ -429,6 +432,9 @@ export function cleanServiceGroups(groups) {
 
           // proxmoxbackupserver
           datastore,
+
+          // qui
+          instance,
 
           // speedtest
           bitratePrecision,
@@ -540,6 +546,9 @@ export function cleanServiceGroups(groups) {
         if (type === "portainer") {
           if (kubernetes) widget.kubernetes = !!JSON.parse(kubernetes);
         }
+        if (type === "qui") {
+          if (instance !== undefined) widget.instance = instance;
+        }
         if (type === "proxmox") {
           if (node) widget.node = node;
         }
@@ -610,6 +619,7 @@ export function cleanServiceGroups(groups) {
           [
             "authentik",
             "beszel",
+            "fileflows",
             "glances",
             "immich",
             "jellyfin",
@@ -674,6 +684,9 @@ export function cleanServiceGroups(groups) {
           if (previousDays) widget.previousDays = previousDays;
           if (showTime) widget.showTime = showTime;
           if (timezone) widget.timezone = timezone;
+        }
+        if (type === "feed") {
+          if (layout) widget.layout = layout;
         }
         if (type === "dockhand") {
           if (environment) widget.environment = environment;
